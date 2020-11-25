@@ -211,6 +211,22 @@ function results() {
     answers4.innerHTML="";
 
     question.append(score + " is your score!");
+
+    var resultsForm = document.createElement("input");
+    answers1.append(resultsForm);
+
+    var resultsBtn = document.createElement("button");
+    resultsBtn.innerText = "Save";
+    resultsBtn.setAttribute("id", "resultsClick");
+    answers2.append(resultsBtn);
+
+    var saveBtn = document.getElementById("resultsClick");
+    saveBtn.onclick = saveBtnClick;
+
+   function saveBtnClick() {
+       console.log("hi");
+   }
+
 }
 
 startBtn.onclick = startBtnClick;
