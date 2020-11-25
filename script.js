@@ -213,6 +213,7 @@ function results() {
     question.append(score + " is your score!");
 
     var resultsForm = document.createElement("input");
+    resultsForm.setAttribute("id", "formInput");
     answers1.append(resultsForm);
 
     var resultsBtn = document.createElement("button");
@@ -225,7 +226,16 @@ function results() {
 
    function saveBtnClick() {
        console.log("hi");
+       var initials = document.getElementById("formInput");
+       var saveInitials = initials.value;
+       console.log(initials);
+       console.log(saveInitials);
+
+       localStorage.setItem(score, saveInitials);
+
    }
+
+   
 
 }
 
